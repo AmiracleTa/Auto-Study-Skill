@@ -12,7 +12,7 @@ Auto study skill 是一个面向 **网页学习平台** 像是 **雨课堂、学
 
 `user: 做完 oop-6 这 50 题，先不要提交`
 
-https://github.com/user-attachments/assets/816565a6-a28b-4a12-a4c5-e75b99978868
+https://github.com/user-attachments/assets/43711b7f-937f-4b95-a277-0847b9b8d996
 
 **学习通**
 
@@ -42,7 +42,7 @@ https://github.com/user-attachments/assets/816565a6-a28b-4a12-a4c5-e75b99978868
 
 >  自动生成 markdown，截取题目，分析答案，记录分数
 
-<img width="1632" height="1773" alt="Image" src="https://github.com/user-attachments/assets/96d5dbff-6cd3-45dc-9957-d2a094b141ba" />
+<img width="800" alt="Image" src="https://github.com/user-attachments/assets/ea38471f-27d3-40d6-8d06-c9f82a31aea1" />
 
 **其他使用方式**
 

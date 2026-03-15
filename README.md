@@ -14,7 +14,7 @@ It currently supports **Windows** or **WSL**, and browser support is limited to 
 
 `user: Finish these 50 OOP-6 questions, but don't submit them yet`
 
-https://github.com/user-attachments/assets/816565a6-a28b-4a12-a4c5-e75b99978868
+https://github.com/user-attachments/assets/43711b7f-937f-4b95-a277-0847b9b8d996
 
 **Xuexitong**
 
@@ -44,7 +44,7 @@ I also saved the screenshots and answer records for each section:
 
 > Auto-generated markdown with captured questions, answer analysis, and recorded scores.
 
-<img width="1632" height="1773" alt="Image" src="https://github.com/user-attachments/assets/96d5dbff-6cd3-45dc-9957-d2a094b141ba" />
+<img width="800" alt="Image" src="https://github.com/user-attachments/assets/ea38471f-27d3-40d6-8d06-c9f82a31aea1" />
 
 **Other usage examples**
 

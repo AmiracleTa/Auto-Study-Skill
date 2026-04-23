@@ -4,7 +4,7 @@
 
 Auto study skill 是一个面向 **网页学习平台** 像是 **雨课堂、学习通、pintia** 或其他 **答题场景** 的 agent skill。让 agent 学会在浏览器中使用学习平台、读取文本或图片、返回答案、选择选项、进行填空等操作。使用独立的浏览器 profile 保持登录状态，减少潜在的安全问题，并支持后台运行。
 
-目前支持 **Windows** 或 **WSL** 环境，浏览器支持 **Windows Chrome**
+目前支持 **Windows**、**WSL** 和 **macOS** 环境，浏览器支持 **Google Chrome**。在 **WSL** 下使用时，应驱动 **Windows 上的 Chrome**。
 
 ## 效果预览
 
@@ -70,7 +70,7 @@ https://github.com/user-attachments/assets/43711b7f-937f-4b95-a277-0847b9b8d996
 
 #### 安装依赖
 
-- Google Chrome (Windows)
+- Google Chrome（Windows 或 macOS）
 - [Agent Browser CLI](https://github.com/vercel-labs/agent-browser)
 - [Agent Browser Skill](https://clawhub.ai/MaTriXy/agent-browser-clawdbot)
 
@@ -84,7 +84,8 @@ https://github.com/user-attachments/assets/43711b7f-937f-4b95-a277-0847b9b8d996
 ## 默认配置
 
 - CDP 端口：`9344`
-- profile 根目录：`%LOCALAPPDATA%\AutoStudy\browser`
+- Windows 下的 profile 根目录：`%LOCALAPPDATA%\AutoStudy\browser`
+- macOS 下的 profile 根目录：`~/Library/Application Support/AutoStudy/browser`
 
 ## 工作流
 
@@ -100,6 +101,7 @@ https://github.com/user-attachments/assets/43711b7f-937f-4b95-a277-0847b9b8d996
 - [references/pintia.md](references/pintia.md) pintia 专用策略
 - [references/runtime-windows.md](references/runtime-windows.md) Windows 运行说明
 - [references/runtime-wsl.md](references/runtime-wsl.md) WSL 运行说明
+- [references/runtime-macos.md](references/runtime-macos.md) macOS 运行说明
 - [references/browser.md](references/browser.md) 浏览器相关说明
 
 ## 合规使用

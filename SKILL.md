@@ -64,13 +64,15 @@ Return only the expected word or phrase.
 
 ## Profile storage
 
-- Default the profile root to `%LOCALAPPDATA%\AutoStudy\browser`.
+- On Windows, default the profile root to `%LOCALAPPDATA%\AutoStudy\browser`.
+- On macOS, default the profile root to `~/Library/Application Support/AutoStudy/browser`.
 - When Chrome is launched for this skill outside the workspace, keep profile folders under the active profile root and reuse the same site profile.
 
 ## Environment-specific guidance
 
 - For Windows-native usage, read `references/runtime-windows.md`.
 - For WSL usage that launches Windows Chrome, read `references/runtime-wsl.md`.
+- For macOS-native usage, read `references/runtime-macos.md`.
 
 ## Browser guidance
 
@@ -84,6 +86,6 @@ Return only the expected word or phrase.
 
 ## Prerequisites
 
-- Google Chrome (on Windows)
+- Google Chrome (on Windows or macOS)
 - [Agent Browser CLI](https://github.com/vercel-labs/agent-browser)
 - [Agent Browser Skill](https://clawhub.ai/MaTriXy/agent-browser-clawdbot)

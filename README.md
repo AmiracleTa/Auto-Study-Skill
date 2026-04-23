@@ -6,7 +6,7 @@ The Auto-Study skill is an agent skill for **web-based learning platforms** such
 
 It teaches the agent to use learning platforms in a browser, read text or images, return answers, choose options, fill in blanks, and carry out similar actions. It uses a separate browser profile to preserve login state, reduce potential security risks, and support background execution.
 
-It currently supports **Windows** or **WSL**, and browser support is limited to **Google Chrome on Windows**.
+It currently supports **Windows**, **WSL**, and **macOS**. Browser support is limited to **Google Chrome**. When used from **WSL**, it should drive **Google Chrome on Windows**.
 
 ## Preview
 
@@ -72,7 +72,7 @@ Copy this repository into your agent's `skills` folder.
 
 #### Install dependencies
 
-- Google Chrome (Windows)
+- Google Chrome (Windows or macOS)
 - [Agent Browser CLI](https://github.com/vercel-labs/agent-browser)
 - [Agent Browser Skill](https://clawhub.ai/MaTriXy/agent-browser-clawdbot)
 
@@ -86,7 +86,8 @@ For detailed strategy, see [SKILL.md](SKILL.md).
 ## Default Configuration
 
 - CDP port: `9344`
-- Profile root directory: `%LOCALAPPDATA%\AutoStudy\browser`
+- Profile root directory on Windows: `%LOCALAPPDATA%\AutoStudy\browser`
+- Profile root directory on macOS: `~/Library/Application Support/AutoStudy/browser`
 
 ## Workflow
 
@@ -102,6 +103,7 @@ For detailed strategy, see [SKILL.md](SKILL.md).
 - [references/pintia.md](references/pintia.md) pintia-specific strategy
 - [references/runtime-windows.md](references/runtime-windows.md) Windows runtime instructions
 - [references/runtime-wsl.md](references/runtime-wsl.md) WSL runtime instructions
+- [references/runtime-macos.md](references/runtime-macos.md) macOS runtime instructions
 - [references/browser.md](references/browser.md) Browser-related notes
 
 ## Acceptable Use

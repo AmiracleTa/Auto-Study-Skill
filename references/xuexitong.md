@@ -1,9 +1,5 @@
 # xuexitong
 
-## Use this file when
-
-The current task is on Xuexitong / Chaoxing
-
 ## Default profile
 
 Use profile:
@@ -13,42 +9,43 @@ xuexitong
 ```
 
 ## Site
+
 `https://i.chaoxing.com/`
 
-## Behavior
+## Core policy
 
 - Do not enter a full-screen homework page.
 - Do not perform actions that a normal user could not perform.
-- Use this `references`, you must **strictly** follow the process and guidance (**especially you** - Codex !!!).
+- **Do not skip the process unless explicitly instructed otherwise; just follow it.**
 
-## Chapter quiz
+## Chapter quiz workflow
 
-**Do not skip the process unless explicitly instructed otherwise; just follow it.**
+### Process order
 
-This workflow is mandatory whenever you answer a chapter quiz.
-**Required** order:
 1. `locate questions`
 2. `answering workflow`
-3. `apply answers on page` (if needed)
-4. `submission workflow` (if needed)
+3. `apply answers on page`
+4. `submission workflow`
 
 ### Locate Questions
 
 #### Target page structure
+
 - The title may be `学生学习页面` or `studentstudy`
 - Outer wrapper page: `studentstudy`
 - The top-level page contains the main content `iframe` `#iframe`
 
 #### What to do
+
 - **First**, click a chapter link to enter the target page, or continue if you are already on it.
 - You do not need to analyze the full page; it is enough to detect `studentstudy` and `iframe` -> `#iframe`.
 - If the `#iframe` sub-document title is `视频` instead of `章节测验`, click `章节测验` to switch from the video page to the quiz page, with a URL like `/mooc-ans/knowledge/cards?...&num=1...`.
 
 ### Answering Workflow
 
-1. Take a full-page(with --full) screenshot and immediately save the picture to `workspace/quiz/picture//[platform(xuexitong)]-[chapter].xxx` before doing anything else.
-2. Read the questions from the screenshot rather than from the DOM, then immediately record them in markdown and save the file to `workspace/quiz/markdown/[platform(xuexitong)]-[chapter].md`(for example `xuexitong-10.3-以世界为方法.md`) before moving to the next step.
-3. Read the markdown file, carefully analyze each question one by one, and immediately append the final answers to the end of the file before proceeding any further.
+1. Create the task directory using the common storage rule, for example `workspace/auto-study/xuexitong/10.3-以世界为方法/`, then take a full-page (`--full`) screenshot and immediately save it to `workspace/auto-study/xuexitong/<task>/images/full.png` before doing anything else.
+2. Read the questions from the screenshot rather than from the DOM, then immediately record them in markdown and save the file to `workspace/auto-study/xuexitong/<task>/record.md` before moving to the next step.
+3. Read `record.md`, carefully analyze each question one by one, and immediately append the final answers to the end of the same file before proceeding any further.
 
 ### Apply Answers On Page (if required)
 

@@ -13,7 +13,7 @@
 
 - `~/Library/Application Support/AutoStudy/browser`
 
-## Notes
+## Core policy
 
 - the task should drive a local macOS Chrome instance
 - the usual Chrome app path is `/Applications/Google Chrome.app`

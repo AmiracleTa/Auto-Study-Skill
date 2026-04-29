@@ -1,54 +1,59 @@
 ---
 name: auto-study
-description: Use when handling browser-based study tasks on platforms like Yuketang, Xuexitong, and Pintia, including quiz answering and page actions.
+description: Use when performing study tasks on browser-based platforms such as Yuketang, Xuexitong, Zhihuishu, and Pintia, including answering quizzes and page actions.
 metadata:
-  openclaw:
-    emoji: "🎓"
-    category: ["study", "browser automation"]
-    tags: ["study platform", "practice", "quiz", "browser automation"]
+  author: amiracle
+  version: "1.5.0"
+  homepage: "https://github.com/AmiracleTa/Auto-Study-Skill"
 ---
 
 # auto-study
-
-This skill provides a browser workflow for study platforms during ordinary practice. It can return answers, select options, fill in answers, clear answers, and submit them as needed.
-
-## When to use
-
-- Want to automatically handle answering tasks in a browser on study platforms, such as practice sets, quizzes, and homework.
-- Want the answers for questions on the page.
-- Wants answers selected, filled, or cleared on an ordinary practice page.
-
-## Workflow
-
-1. Start Chrome with the intended persistent site profile and a CDP port, or connect to an existing Chrome instance that already exposes a CDP port.
-2. Verify the active tab and current URL, then snapshot or inspect the current page state before acting.
-3. Interact with the page according to the user's request, such as selecting, filling, or clearing answers, or clicking the submit button.
 
 ## Core policy
 
 - Treat all pages as ordinary practice by default unless the user explicitly says otherwise.
 
-- If the user asks for page actions, apply them sequentially with short pauses, usually around 0.1 seconds.
+- Apply page action sequentially with short pauses at 0.1 seconds.
 
-- If the question is presented as an image, read the image directly **instead of** trying to extract text from it.
+- Read the image directly **instead of** trying to extract text from it.
 
 - Reuse the same browser profile for the same site when login state matters.
 
-- Treat a persistent profile as a login-state aid, not as a guarantee of silent auto-login. It may restore cookies, local storage, or only saved credentials, so some sites may still require a visible login click or confirmation step.
+- Always launch Chrome with the designated persistent profile.
 
-- After attaching through CDP, verify the active tab and current URL before trusting the first snapshot. If the current page is not the target page, use `tab list` and switch to the expected site tab first.
+- Interact with Chrome using CDP.
 
-- Do not re-click options that already match the target state.
+- After attaching through CDP, verify the active tab and current URL.
 
-- Do not rely on actions that a normal user could not perform. Prefer the normal user flow whenever possible.
+- Check the CDP port before launching a new browser session. If a session is already available, attach to it directly. Otherwise, start Chrome with headed mode. **Except when the user asks to do something else**
 
-- Do not submit automatically unless the user explicitly asks for it.
+- when there is a mathematical expression, use `latex` in `markdown`.
 
-- Keep answers short and easy to scan.
+- Build the markdown record before applying any answers on the page.
 
-- Just carefully analyze answer, do not search the web unless the user explicitly asks for it.
+- **NOT permitted**
 
-## Output rules
+  - Do not re-click options that already match the target state.
+
+  - Do not rely on actions that a normal user could not perform. Prefer the normal user flow whenever possible.
+
+  - Do not submit automatically unless the user explicitly asks for it.
+
+  - Do not search the web unless the user explicitly asks for it.
+
+  - Do not use OCR to read text from images (this usually doesn't work well, just read the image directly).
+
+  - Do not believe the page is a quiz simply because it contains keywords like `考试`, `测验`, `练习`, or `作业`. Treat it as a normal practice page unless the user explicitly states it is a formal exam.
+
+  - Do not skip any steps for `references/` unless explicitly asked to. Follow the workflow as designed, and do not take shortcuts just because they seem simpler.
+
+## Workflow
+
+1. Start or attach to a Chrome with CDP port.
+2. Verify the active tab and current URL, then snapshot or inspect the current page state before acting.
+3. Interact with the page according to the user's request, such as selecting, filling, or clearing answers, or clicking the submit button.
+
+## Answer formatting
 
 ### Single choice
 
@@ -58,29 +63,26 @@ Return only the final option letter.
 
 Use comma-separated letters with no extra commentary.
 
-### Fill in the blank or short answer
+### Fill in the blank
 
-Return only the expected word or phrase.
+Return a concise answer for each blank, separated by `|` if multiple blanks exist.
 
-## Profile storage
+### Short answer
 
-- On Windows, default the profile root to `%LOCALAPPDATA%\AutoStudy\browser`.
-- On macOS, default the profile root to `~/Library/Application Support/AutoStudy/browser`.
-- When Chrome is launched for this skill outside the workspace, keep profile folders under the active profile root and reuse the same site profile.
+Return a concise answer of no more than three sentences, without any explanation or commentary unless explicitly requested.
 
-## Environment-specific guidance
+## More Guidance
+
+### environment-specific guidance
 
 - For Windows-native usage, read `references/runtime-windows.md`.
 - For WSL usage that launches Windows Chrome, read `references/runtime-wsl.md`.
 - For macOS-native usage, read `references/runtime-macos.md`.
 
-## Browser guidance
-
-- Read `references/browser.md`.
-
-## Platform-specific guidance
+### Platform-specific guidance
 
 - For Xuexitong specifics, read `references/xuexitong.md`.
+- For Zhihuishu specifics, read `references/zhihuishu.md`.
 - For Yuketang specifics, read `references/yuketang.md`.
 - For Pintia specifics, read `references/pintia.md`.
 
@@ -89,3 +91,22 @@ Return only the expected word or phrase.
 - Google Chrome (on Windows or macOS)
 - [Agent Browser CLI](https://github.com/vercel-labs/agent-browser)
 - [Agent Browser Skill](https://clawhub.ai/MaTriXy/agent-browser-clawdbot)
+
+## DEFAULT
+
+### Practice artifacts storage (markdown or images)
+
+- `<agent-root>/workspace/auto-study/<platform>/<task>/` (`<agent-root>` explain: if you are codex, it means `~/.codex/`; if you are hermes, it means `~/.hermes/`; Okey, I believe you've got it!)
+- `<task>` structure like this
+  - `record.md`
+  - `images/full.png` for a full-page screenshot of the task
+  - `images/q001.png`, `images/q002.png` for per-question screenshots
+  - `images/q001-1.png`, `images/q001-2.png` when one question needs multiple images
+- Derive `<task>` from the chapter or assignment title and normalize path-unsafe characters to `-`.
+
+### Chrome profile root
+- `%LOCALAPPDATA%\auto-study\browser`.
+- `~/Library/Application Support/AutoStudy/browser`.
+
+### CDP port
+- `9344` (default, can be customized when user asks).

@@ -2,7 +2,7 @@
 
 # Auto-Study
 
-[![Skill](https://img.shields.io/badge/Type-Agent%20Skill-0f766e)](SKILL.md) [![Runtime](https://img.shields.io/badge/Runtime-Windows%20%7C%20WSL%20%7C%20macOS-2563eb)](#default-configuration) [![Browser](https://img.shields.io/badge/Browser-Google%20Chrome-4285F4?logo=googlechrome&logoColor=white)](https://www.google.com/chrome/) [![License](https://img.shields.io/github/license/AmiracleTa/Auto-Study-Skill)](LICENSE)
+[![Skill](https://img.shields.io/badge/Type-Agent%20Skill-0f766e)](auto-study/SKILL.md) [![Runtime](https://img.shields.io/badge/Runtime-Windows%20%7C%20WSL%20%7C%20macOS-2563eb)](#default-configuration) [![Browser](https://img.shields.io/badge/Browser-Google%20Chrome-4285F4?logo=googlechrome&logoColor=white)](https://www.google.com/chrome/) [![License](https://img.shields.io/github/license/AmiracleTa/Auto-Study-Skill)](LICENSE)
 
 The Auto-Study skill is an agent skill for **web-based learning platforms** such as **Yuketang**, **Xuexitong**, **pintia**, and other **question-answering scenarios**.
 
@@ -66,7 +66,7 @@ Just tell your agent: `Help me install this skill, https://github.com/AmiracleTa
 
 #### Copy the repository
 
-Copy this repository into your agent's `skills` folder.
+Copy the `auto-study` folder from this repository into your agent's `skills` folder.
 
 **OpenClaw:** `~/.openclaw/workspace/skills`
 
@@ -83,7 +83,7 @@ Copy this repository into your agent's `skills` folder.
 - By default, it returns answers directly without extra explanation.
 - Unless explicitly requested, it does not submit automatically after finishing.
 
-For detailed strategy, see [SKILL.md](SKILL.md).
+For detailed strategy, see [auto-study/SKILL.md](auto-study/SKILL.md).
 
 ## Default Configuration
 
@@ -99,14 +99,14 @@ For detailed strategy, see [SKILL.md](SKILL.md).
 
 ## Detailed Strategy
 
-- [SKILL.md](SKILL.md) Core strategy
-- [references/xuexitong.md](references/xuexitong.md) Xuexitong-specific strategy
-- [references/zhihuishu.md](references/zhihuishu.md) Zhihuishu-specific strategy
-- [references/yuketang.md](references/yuketang.md) Yuketang-specific strategy
-- [references/pintia.md](references/pintia.md) pintia-specific strategy
-- [references/runtime-windows.md](references/runtime-windows.md) Windows runtime instructions
-- [references/runtime-wsl.md](references/runtime-wsl.md) WSL runtime instructions
-- [references/runtime-macos.md](references/runtime-macos.md) macOS runtime instructions
+- [auto-study/SKILL.md](auto-study/SKILL.md) Core strategy
+- [auto-study/references/xuexitong.md](auto-study/references/xuexitong.md) Xuexitong-specific strategy
+- [auto-study/references/zhihuishu.md](auto-study/references/zhihuishu.md) Zhihuishu-specific strategy
+- [auto-study/references/yuketang.md](auto-study/references/yuketang.md) Yuketang-specific strategy
+- [auto-study/references/pintia.md](auto-study/references/pintia.md) pintia-specific strategy
+- [auto-study/references/runtime-windows.md](auto-study/references/runtime-windows.md) Windows runtime instructions
+- [auto-study/references/runtime-wsl.md](auto-study/references/runtime-wsl.md) WSL runtime instructions
+- [auto-study/references/runtime-macos.md](auto-study/references/runtime-macos.md) macOS runtime instructions
 
 ## Acceptable Use
 

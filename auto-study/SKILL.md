@@ -3,7 +3,7 @@ name: auto-study
 description: Use when performing study tasks on browser-based platforms such as Yuketang, Xuexitong, Zhihuishu, and Pintia, including answering quizzes and page actions.
 metadata:
   author: amiracle
-  version: "1.5.0"
+  version: "1.5.1"
   homepage: "https://github.com/AmiracleTa/Auto-Study-Skill"
 ---
 

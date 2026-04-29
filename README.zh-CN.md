@@ -2,7 +2,7 @@
 
 # Auto-Study
 
-[![Skill](https://img.shields.io/badge/Type-Agent%20Skill-0f766e)](SKILL.md) [![Runtime](https://img.shields.io/badge/Runtime-Windows%20%7C%20WSL%20%7C%20macOS-2563eb)](#默认配置) [![Browser](https://img.shields.io/badge/Browser-Google%20Chrome-4285F4?logo=googlechrome&logoColor=white)](https://www.google.com/chrome/) [![License](https://img.shields.io/github/license/AmiracleTa/Auto-Study-Skill)](LICENSE)
+[![Skill](https://img.shields.io/badge/Type-Agent%20Skill-0f766e)](auto-study/SKILL.md) [![Runtime](https://img.shields.io/badge/Runtime-Windows%20%7C%20WSL%20%7C%20macOS-2563eb)](#默认配置) [![Browser](https://img.shields.io/badge/Browser-Google%20Chrome-4285F4?logo=googlechrome&logoColor=white)](https://www.google.com/chrome/) [![License](https://img.shields.io/github/license/AmiracleTa/Auto-Study-Skill)](LICENSE)
 
 Auto study skill 是一个面向 **网页学习平台** 像是 **雨课堂、学习通、pintia** 或其他 **答题场景** 的 agent skill。让 agent 学会在浏览器中使用学习平台、读取文本或图片、返回答案、选择选项、进行填空等操作。使用独立的浏览器 profile 保持登录状态，减少潜在的安全问题，并支持后台运行。
 
@@ -64,7 +64,7 @@ Auto study skill 是一个面向 **网页学习平台** 像是 **雨课堂、学
 
 #### 复制仓库
 
-把此仓库复制到 agent 的 `skills` 文件夹。
+把此仓库里的 `auto-study` 文件夹复制到 agent 的 `skills` 文件夹。
 
 **OpenClaw:** `~/.openclaw/workspace/skills`
 
@@ -81,7 +81,7 @@ Auto study skill 是一个面向 **网页学习平台** 像是 **雨课堂、学
 - 默认直接给答案，不附加额外解释。
 - 除非明确要求，否则做完后不自动提交。
 
-详细策略参考 [SKILL.md](SKILL.md)。
+详细策略参考 [auto-study/SKILL.md](auto-study/SKILL.md)。
 
 ## 默认配置
 
@@ -97,14 +97,14 @@ Auto study skill 是一个面向 **网页学习平台** 像是 **雨课堂、学
 
 ## 详细策略
 
-- [SKILL.md](SKILL.md) 核心策略
-- [references/xuexitong.md](references/xuexitong.md) 学习通专用策略
-- [references/zhihuishu.md](references/zhihuishu.md) 智慧树专用策略
-- [references/yuketang.md](references/yuketang.md) 雨课堂专用策略
-- [references/pintia.md](references/pintia.md) pintia 专用策略
-- [references/runtime-windows.md](references/runtime-windows.md) Windows 运行说明
-- [references/runtime-wsl.md](references/runtime-wsl.md) WSL 运行说明
-- [references/runtime-macos.md](references/runtime-macos.md) macOS 运行说明
+- [auto-study/SKILL.md](auto-study/SKILL.md) 核心策略
+- [auto-study/references/xuexitong.md](auto-study/references/xuexitong.md) 学习通专用策略
+- [auto-study/references/zhihuishu.md](auto-study/references/zhihuishu.md) 智慧树专用策略
+- [auto-study/references/yuketang.md](auto-study/references/yuketang.md) 雨课堂专用策略
+- [auto-study/references/pintia.md](auto-study/references/pintia.md) pintia 专用策略
+- [auto-study/references/runtime-windows.md](auto-study/references/runtime-windows.md) Windows 运行说明
+- [auto-study/references/runtime-wsl.md](auto-study/references/runtime-wsl.md) WSL 运行说明
+- [auto-study/references/runtime-macos.md](auto-study/references/runtime-macos.md) macOS 运行说明
 
 ## 合规使用
 

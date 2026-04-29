@@ -2,6 +2,8 @@
 
 # Auto-Study
 
+[![Skill](https://img.shields.io/badge/Type-Agent%20Skill-0f766e)](SKILL.md) [![Runtime](https://img.shields.io/badge/Runtime-Windows%20%7C%20WSL%20%7C%20macOS-2563eb)](#default-configuration) [![Browser](https://img.shields.io/badge/Browser-Google%20Chrome-4285F4?logo=googlechrome&logoColor=white)](https://www.google.com/chrome/) [![License](https://img.shields.io/github/license/AmiracleTa/Auto-Study-Skill)](LICENSE)
+
 The Auto-Study skill is an agent skill for **web-based learning platforms** such as **Yuketang**, **Xuexitong**, **pintia**, and other **question-answering scenarios**.
 
 It teaches the agent to use learning platforms in a browser, read text or images, return answers, choose options, fill in blanks, and carry out similar actions. It uses a separate browser profile to preserve login state, reduce potential security risks, and support background execution.
@@ -14,7 +16,7 @@ It currently supports **Windows**, **WSL**, and **macOS**. Browser support is li
 
 `user: Finish these 50 OOP-6 questions, but don't submit them yet`
 
-https://github.com/user-attachments/assets/43711b7f-937f-4b95-a277-0847b9b8d996
+[Preview](https://github.com/user-attachments/assets/43711b7f-937f-4b95-a277-0847b9b8d996)
 
 **Xuexitong**
 
@@ -35,11 +37,11 @@ The chapter quizzes for 10.1 - 10.5 are all completed and submitted.
 - 10.5: 100
 
 I also saved the screenshots and answer records for each section:
-- quiz/markdown/xuexitong-10.1-以法治为重器：法治的价值定位.md
-- quiz/markdown/xuexitong-10.2-以系统为谋划：法治的推进战略.md
-- quiz/markdown/xuexitong-10.3-以世界为方法：法治的世界结构（上）.md
-- quiz/markdown/xuexitong-10.4-以世界为方法：法治的世界结构（下）.md
-- quiz/markdown/xuexitong-10.5-以中国为目的：法治的中国语境.md
+- workspace/auto-study/xuexitong/10.1-以法治为重器：法治的价值定位/record.md
+- workspace/auto-study/xuexitong/10.2-以系统为谋划：法治的推进战略/record.md
+- workspace/auto-study/xuexitong/10.3-以世界为方法：法治的世界结构（上）/record.md
+- workspace/auto-study/xuexitong/10.4-以世界为方法：法治的世界结构（下）/record.md
+- workspace/auto-study/xuexitong/10.5-以中国为目的：法治的中国语境/record.md
 ```
 
 > Auto-generated markdown with captured questions, answer analysis, and recorded scores.
@@ -99,12 +101,12 @@ For detailed strategy, see [SKILL.md](SKILL.md).
 
 - [SKILL.md](SKILL.md) Core strategy
 - [references/xuexitong.md](references/xuexitong.md) Xuexitong-specific strategy
+- [references/zhihuishu.md](references/zhihuishu.md) Zhihuishu-specific strategy
 - [references/yuketang.md](references/yuketang.md) Yuketang-specific strategy
 - [references/pintia.md](references/pintia.md) pintia-specific strategy
 - [references/runtime-windows.md](references/runtime-windows.md) Windows runtime instructions
 - [references/runtime-wsl.md](references/runtime-wsl.md) WSL runtime instructions
 - [references/runtime-macos.md](references/runtime-macos.md) macOS runtime instructions
-- [references/browser.md](references/browser.md) Browser-related notes
 
 ## Acceptable Use
 
